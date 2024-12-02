@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Display Properties</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .block-element {
+      display: block;
+      width: 100%;
+      border: 2px solid blue;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    .inline-element {
+      display: inline;
+      background-color: lightgreen;
+      padding: 5px;
+      margin-right: 10px;
+    }
+
+    .inline-block-element {
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      background-color: lightcoral;
+      border: 2px solid red;
+      margin-right: 10px;
+    }
+
+    .hidden-element {
+      display: none;
+      background-color: lightgray;
+      border: 2px dashed gray;
+      padding: 10px;
+    }
+  </style>
+  <script>
+    function toggleHiddenElement() {
+      const hiddenElement = document.querySelector('.hidden-element');
+      if (hiddenElement.style.display === 'none') {
+        hiddenElement.style.display = 'block';
+      } else {
+        hiddenElement.style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>CSS Display Properties</h1>
+
+  <div class="block-element">This is a block element (takes full width).</div>
+  <span class="inline-element">This is an inline element.</span>
+  <span class="inline-element">Another inline element.</span>
+  <div class="inline-block-element">This is an inline-block element.</div>
+
+  <div class="hidden-element">This element is initially hidden.</div>
+
+  <button onclick="toggleHiddenElement()">Toggle Hidden Element</button>
+</body>
+</html>
